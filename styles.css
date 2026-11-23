@@ -1,0 +1,111 @@
+* {                                         /* Seletor universal: vale para TODOS os elementos da página */
+    font-family: "Poppins", sans-serif;     /* Fonte do texto: Poppins; se não carregar, usa uma sans-serif padrão */
+    margin: 0;                              /* Remove a margem externa padrão do navegador */
+    padding: 0;                             /* Remove o espaçamento interno padrão do navegador */
+    box-sizing: border-box;                 /* Largura/altura já incluem padding e borda (facilita o cálculo de tamanhos) */
+}
+
+header {                                    /* Seletor da tag <header> (cabeçalho com os links e o botão) */
+    margin: 44px 0 178px 42px;              /* Margem externa: topo 44px | direita 0 | baixo 178px | esquerda 42px */
+}
+
+.link-header {                              /* Classe .link-header: os links do menu no cabeçalho */
+    font-weight: 400;                       /* Espessura da letra: 400 = normal */
+    font-size: 14px;                        /* Tamanho da letra */
+    line-height: 29px;                      /* Altura da linha (espaço vertical ao redor do texto) */
+    cursor: pointer;                        /* Mostra a "mãozinha" ao passar o mouse */
+    Color: #17233D;                         /* Cor do texto (azul escuro). Dica: escreva "color" com c minúsculo */
+    margin-right: 32px;                     /* Espaço à direita, separando um link do outro */
+}
+
+.button-sign-up {                           /* Classe .button-sign-up: o botão "Sign Up" */
+    background: #6FBF44;                    /* Cor de fundo do botão (verde) */
+    width: 124px;                           /* Largura do botão */
+    height: 51px;                           /* Altura do botão */
+    border: 1px solid #4CB538;              /* Borda: 1px de espessura, linha contínua, verde mais escuro */
+    border-radius: 6px;                     /* Arredonda os cantos do botão */
+    cursor: pointer;                        /* Mostra a "mãozinha" ao passar o mouse */
+    color: #FFFFFF;                         /* Cor do texto do botão (branco) */
+    font-weight: 500;                       /* Espessura da letra: 500 = média */
+    font-size: 14px;                        /* Tamanho da letra */
+    line-height: 29px;                      /* Altura da linha do texto */
+}
+
+main {                                      /* Seletor da tag <main> (conteúdo principal: imagem + texto) */
+  display: flex;                            /* Ativa o Flexbox: coloca os filhos (imagem e section) lado a lado */
+  align-items: center;                      /* centraliza o texto na vertical em relação à imagem */
+  gap: 85px;                                /* espaço entre imagem e texto */
+  padding-left: 121px;                      /* Espaço interno à esquerda, afastando o conteúdo da borda da tela */
+}
+
+.logo-img {                                 /* Classe .logo-img: a imagem principal */
+  width: 595px;                             /* Largura da imagem */
+  height: 500px;                            /* Altura da imagem */
+}
+
+section {                                   /* Seletor da tag <section> (bloco com título, parágrafo e link) */
+  width: 582px;                             /* Largura total do bloco de texto */
+  margin-top: 150px;                        /* Margem externa no topo, empurrando o bloco para baixo */
+}
+
+h1 {                                        /* Seletor da tag <h1> (título principal) */
+  font-weight: 700;                         /* Espessura da letra: 700 = negrito */
+  font-size: 62px;                          /* Tamanho da letra (título grande) */
+  line-height: 82px;                        /* Altura da linha (espaço entre as linhas do título) */
+  color: #161A49;                           /* Cor do título (azul escuro) */
+  margin: 0 0 47px 0;                       /* Margem: topo 0 | direita 0 | baixo 47px | esquerda 0 */
+}
+
+p {                                         /* Seletor da tag <p> (parágrafo de descrição) */
+  font-weight: 400;                         /* Espessura da letra: normal */
+  font-size: 18px;                          /* Tamanho da letra */
+  line-height: 33px;                        /* Altura da linha (deixa o texto mais "arejado") */
+  width: 493px;                             /* Largura do parágrafo (limita onde o texto quebra de linha) */
+  color: #4B505A;                           /* Cor do texto (cinza) */
+  margin: 0 0 55px 0;                       /* Margem: só embaixo, 55px, separando do link final */
+}
+
+.final {                                    /* Classe .final: o link/texto de chamada no final (ex: "Learn more") */
+  font-weight: 500;                         /* Espessura da letra: média */
+  font-size: 18px;                          /* Tamanho da letra */
+  color: #6FBF44;                           /* Cor do texto (verde, igual ao botão) */
+  cursor: pointer;                          /* Mostra a "mãozinha" ao passar o mouse */
+  text-decoration: none;                    /* Remove o sublinhado padrão dos links */
+}
+
+@media screen and (max-width: 1250px){
+  header {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .link-header{
+      display: none;
+    }
+  .button-sign-up{
+    position: absolute;
+    top: 17px;
+    right: 15px ;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .logo-img {
+    width: 390px;
+    height: 340px;
+    position: relative;
+    bottom: 22px;
+    left: auto;
+    right: auto;
+  }
+
+  section{
+    left: 43px;
+    right: auto;
+  }
+
+
+  }
